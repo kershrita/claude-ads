@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.jpeg" alt="Claude Ads" width="100%">
+  <img src="assets/banner.png" alt="Claude Ads" width="100%">
 </p>
 
 # Claude Ads
