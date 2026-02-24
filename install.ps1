@@ -36,7 +36,10 @@ function Main {
     Write-Host "Downloading Claude Ads..."
 
     try {
-        git clone --depth 1 $RepoUrl "$TempDir\claude-ads" 2>$null
+        $prevEAP = $ErrorActionPreference
+        $ErrorActionPreference = "Continue"
+        git clone --depth 1 $RepoUrl "$TempDir\claude-ads" 2>&1 | Out-Null
+        $ErrorActionPreference = $prevEAP
         if ($LASTEXITCODE -ne 0) { throw "Git clone failed" }
 
         # Copy main skill + references

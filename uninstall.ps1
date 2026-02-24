@@ -10,7 +10,7 @@
 $ErrorActionPreference = "Stop"
 
 function Main {
-    Write-Host "→ Uninstalling Claude Ads..."
+    Write-Host "Uninstalling Claude Ads..."
 
     $ClaudeDir = Join-Path $env:USERPROFILE ".claude"
 
@@ -45,7 +45,7 @@ function Main {
         }
     }
 
-    Write-Host "✓ Claude Ads uninstalled." -ForegroundColor Green
+    Write-Host 'Claude Ads uninstalled.' -ForegroundColor Green
 }
 
 Main
